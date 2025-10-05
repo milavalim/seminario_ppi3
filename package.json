@@ -1,0 +1,24 @@
+{
+  "name": "seminario_ppi3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:sass": "sass sass/main.scss css/sass.css --no-source-map --style=expanded",
+    "watch:sass": "sass --watch sass/main.scss:css/sass.css --no-source-map --style=expanded",
+    "build:less": "npx lessc less/main.less css/less.css",
+    "watch:less": "chokidar \"less/main.less\" -c \"npx lessc less/main.less css/less.css\"",
+    "build:styles": "npm run build:sass && npm run build:less",
+    "watch:styles": "concurrently \"npm run watch:sass\" \"npm run watch:less\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
+    "less": "^4.4.1",
+    "sass": "^1.93.2"
+  }
+}
