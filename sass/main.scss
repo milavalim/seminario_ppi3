@@ -68,7 +68,7 @@ nav {
 
             
             &:hover {
-                background-color: lighten($primary-color, 10%);
+                background-color: color.adjust($primary-color, $lightness: 10%); //essa é uma função nova pra clarear a cor
             }
         }
     }
